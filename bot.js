@@ -2,9 +2,6 @@
  * Uncle Joe's Music Butt
  * Developed by Joseph and ASIANBOI with a few contributions by ZelAk32 and Hackzilla
  * Visit https://discord.gg/WAzJfJT for more information.
- * I am ze king of ze wurld
- * Le kek
- * ASIANBOI is a fish
  */
 var errorlog = require("./data/errors.json")
 
