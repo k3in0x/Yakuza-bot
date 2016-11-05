@@ -1,0 +1,33 @@
+{
+  "name": "uncle-sephs-music-butt",
+  "version": "1.0.0",
+  "description": "A simple discord.js music bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JoeBanks13/Music-Butt.git"
+  },
+  "keywords": [
+    "music",
+    "bot",
+    "discord",
+    "node.js",
+    "npm",
+    "ytdl"
+  ],
+  "author": "Joseph Banks, ZelAk312, Hackzilla, ASIANBOI",
+  "license": "I put de license in de folder",
+  "bugs": {
+    "url": "https://github.com/JoeBanks13/Music-Butt/issues"
+  },
+  "homepage": "https://github.com/JoeBanks13/Music-Butt",
+  "dependencies": {
+    "discord.js": "github:hydrabolt/discord.js",
+    "opusscript": "0.0.1",
+    "youtube-search": "^1.0.6",
+    "ytdl-core": "^0.7.17"
+  }
+}
