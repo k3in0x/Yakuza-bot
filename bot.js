@@ -230,7 +230,7 @@ bot.on('voiceStateUpdate', function(oldMember, newMember) {
                     bot.user.setGame(game);
                 }
             }
-            if (svr[i].voiceConnection.channel.members.size === 1) {
+            if (svr[i].voiceConnection.channel.members.size === 1 && !svr[i].voiceConnection.player.dispatcher.paused) {
                 svr[i].defaultChannel.sendMessage("I paused my music in the voice channel because no one is there, type `" + prefix + "resume` to resume music")
                 svr[i].voiceConnection.player.dispatcher.pause();
                 var game = bot.user.presence.game.name;
