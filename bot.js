@@ -227,7 +227,8 @@ bot.on('voiceStateUpdate', function(oldMember, newMember) {
 					paused[svr[i].voiceConnection.channel.id].player.resume()
 					var game = bot.user.presence.game.name;
                     delete paused[svr[i].voiceConnection.channel.id]
-                    bot.user.setGame(game);
+                    game = game.split("⏸")[1];
+					bot.user.setGame(game);
                 }
             }
             if (svr[i].voiceConnection.channel.members.size === 1 && !svr[i].voiceConnection.player.dispatcher.paused) {
