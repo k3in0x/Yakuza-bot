@@ -223,7 +223,7 @@ bot.on('voiceStateUpdate', function(oldMember, newMember) {
         if (svr[i].voiceConnection) {
             if (paused[svr[i].voiceConnection.channel.id]) {
                 if (svr[i].voiceConnection.channel.members.size > 1) {
-                    svr[i].defaultChannel.sendMessage("I resumed my music in " + svr[i].voiceConnection.channel.name)
+                    //svr[i].defaultChannel.sendMessage("I resumed my music in " + svr[i].voiceConnection.channel.name)
 					paused[svr[i].voiceConnection.channel.id].player.resume()
 					var game = bot.user.presence.game.name;
                     delete paused[svr[i].voiceConnection.channel.id]
@@ -232,7 +232,7 @@ bot.on('voiceStateUpdate', function(oldMember, newMember) {
                 }
             }
             if (svr[i].voiceConnection.channel.members.size === 1 && !svr[i].voiceConnection.player.dispatcher.paused) {
-                svr[i].defaultChannel.sendMessage("I paused my music in the voice channel because no one is there, rejoin the channel to resume music")
+                //svr[i].defaultChannel.sendMessage("I paused my music in the voice channel because no one is there, rejoin the channel to resume music")
                 svr[i].voiceConnection.player.dispatcher.pause();
                 var game = bot.user.presence.game.name;
                 paused[svr[i].voiceConnection.channel.id] = {
