@@ -246,7 +246,7 @@ bot.on('voiceStateUpdate', function(oldMember, newMember) {
 bot.on("message", function(message) {
     try {
         if (message.author.bot) return
-		if (msg.channel.type === "dm") return;
+		if (message.channel.type === "dm") return;
         if (message.author === bot.user)
             if (message.guild === undefined) {
                 message.channel.sendMessage("The bot only works in servers!")
