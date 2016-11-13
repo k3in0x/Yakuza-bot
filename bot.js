@@ -29,7 +29,7 @@ try {
         process.exit(0)
     }
 }
-
+const admins = config.admins;
 const bot = new Discord.Client()
 const notes = require('./data/notes.json')
 const os = require('os')
@@ -174,6 +174,18 @@ function secondsToString(seconds) {
         console.log("Could not get time")
         return 'Could not get time';
     }
+}
+
+function isCommander(id) {
+	if(id === config.owner_id) {
+		return true;
+	}
+	for(var i = 0; i < admins.length; i++){
+		if(admins[i] == id) {
+			return true;
+		}
+	}
+	return false;
 }
 
 bot.on('ready', function() {
@@ -605,7 +617,7 @@ ${prefix}sys - Gets system information${rb}`)
         }
 
         if (message.content.startsWith(prefix + 'eval')) {
-            if (message.author.id === config.owner_id || admins.indexOf(message.author.id) > -1) {
+            if (isCommander(message.author.id)) {
                 try {
                     let code = message.content.split(" ").splice(1).join(" ")
                     let result = eval(code)
@@ -615,7 +627,6 @@ ${prefix}sys - Gets system information${rb}`)
                 }
             } else {
                 message.channel.sendMessage("Sorry, you do not have permissisons to use this command, **" + message.author.username + "**.")
-
             }
         }
 
