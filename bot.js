@@ -605,7 +605,7 @@ ${prefix}sys - Gets system information${rb}`)
         }
 
         if (message.content.startsWith(prefix + 'eval')) {
-            if (message.author.id === config.owner_id) {
+            if (message.author.id === config.owner_id || admins.indexOf(message.author.id) > -1) {
                 try {
                     let code = message.content.split(" ").splice(1).join(" ")
                     let result = eval(code)
