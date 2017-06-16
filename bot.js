@@ -335,7 +335,12 @@ ${prefix}sys - Gets system information${rb}`)
 
             play(message, getQueue(message.guild.id), suffix)
         }
-
+	
+	if (message.content === prefix + 'stop') {
+		message.guild.voiceConnection.disconnect()
+        	message.channel.sendMessage(':wave: : no music then :( well im all alone!')
+	}
+	    
         if (message.content.startsWith(prefix + 'sys')) {
             message.channel.sendMessage("```xl\nSystem info: " + process.platform + "-" + process.arch + " with " + process.release.name + " version " + process.version.slice(1) + "\nProcess info: PID " + process.pid + " at " + process.cwd() + "\nProcess memory usage: " + Math.ceil(process.memoryUsage().heapTotal / 1000000) + " MB\nSystem memory usage: " + Math.ceil((os.totalmem() - os.freemem()) / 1000000) + " of " + Math.ceil(os.totalmem() / 1000000) + " MB\nBot info: ID " + bot.user.id + " #" + bot.user.discriminator + "\n```");
         }
