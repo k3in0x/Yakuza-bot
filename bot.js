@@ -17,12 +17,12 @@ try {
     if (process.env.MUSIC_BOT_TOKEN && process.env.YOUTUBE_API_KEY) {
         var config = {
             "token": process.env.MUSIC_BOT_TOKEN,
-            "client_id": "241966505334407168",
+            "client_id": "369912490638966784",
             "prefix": "`",
-            "owner_id": "171319044715053057",
+            "owner_id": "656844107821481987",
             "status": "Musicccc",
             "youtube_api_key": process.env.YOUTUBE_API_KEY,
-            "admins": ["165023948638126080"]
+            "admins": ["656844107821481987"]
         }
     } else {
         console.log("No token passed! Exiting...")
