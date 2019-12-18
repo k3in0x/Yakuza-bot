@@ -3,8 +3,7 @@ A
 K
 U
 Z
-A
-
+A 
 B
 O
 T
