@@ -18,7 +18,7 @@ try {
         var config = {
             "token": process.env.MUSIC_BOT_TOKEN,
             "client_id": "369912490638966784",
-            "prefix": "`",
+            "prefix": "!",
             "owner_id": "656844107821481987",
             "status": "Musicccc",
             "youtube_api_key": process.env.YOUTUBE_API_KEY,
