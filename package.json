@@ -2,9 +2,9 @@
   "name": "uncle-sephs-music-butt",
   "version": "1.0.0",
   "description": "A simple discord.js music bot",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
-    "test": "node bot.js"
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
